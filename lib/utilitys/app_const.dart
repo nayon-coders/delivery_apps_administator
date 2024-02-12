@@ -1,1 +1,1 @@
-import 'package:flutter/material.dart';class AppConst{  static const String app_logo = "assets/images/logo.png";  static const String brand_image = "assets/images/bland.png";}
+import 'package:flutter/material.dart';class AppConst{  static const String app_logo = "assets/images/logo.png";  static const String brand_image = "assets/images/logo2.png";}
