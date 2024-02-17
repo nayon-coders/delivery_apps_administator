@@ -1,6 +1,7 @@
 import 'package:driver/utilitys/app_const.dart';
 import 'package:driver/utilitys/colors.dart';
 import 'package:driver/view/all_delivery.dart';
+import 'package:driver/widgets/app_inputs.dart';
 import 'package:flutter/material.dart';
 class User_List extends StatefulWidget {
   const User_List({super.key});
@@ -10,6 +11,7 @@ class User_List extends StatefulWidget {
 }
 
 class _User_ListState extends State<User_List> {
+  final _search=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
@@ -24,33 +26,8 @@ class _User_ListState extends State<User_List> {
       body:Column(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                hintText: "Buscar Delivery Body",
-                hintStyle: TextStyle(color: Colors.grey,),
-                prefixIcon: Icon(Icons.search,color: Colors.grey,),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none,
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none,
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-
-                ),
-                disabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                )
-
-
-              ),
-            ),
+            padding: const EdgeInsets.all(20),
+            child: AppInput(title: "", hintText: "Buscar Delivery Body",prefixIcon: Icon(Icons.search,color: Colors.grey,), controller: _search),
           ),
           SizedBox(height: 20,),
           Expanded(
