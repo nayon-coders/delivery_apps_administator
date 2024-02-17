@@ -1,4 +1,5 @@
 import 'package:driver/utilitys/colors.dart';
+import 'package:driver/view/single_restaurent/Single_Restaurent.dart';
 import 'package:flutter/material.dart';
 class Single_Delivery extends StatefulWidget {
   const Single_Delivery({super.key});
@@ -67,7 +68,7 @@ class _Single_DeliveryState extends State<Single_Delivery> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.add_box_outlined),
+                leading: Image(image: AssetImage("assets/images/shoe.webp"),fit: BoxFit.cover,),
                 title: Text("Product Name",style: TextStyle(fontWeight: FontWeight.w600),),
                 subtitle: Text("10 X 19.98 \$"),
                 trailing: Text("50.52 \$"),
@@ -77,7 +78,7 @@ class _Single_DeliveryState extends State<Single_Delivery> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.shop),
+                leading: Image(image: AssetImage("assets/images/shoe.webp"),fit: BoxFit.cover,),
                 title: Text("Product Name",style: TextStyle(fontWeight: FontWeight.w600),),
                 subtitle: Text("10 X 19.98 \$"),
                 trailing: Text("50.52 \$"),
@@ -87,7 +88,7 @@ class _Single_DeliveryState extends State<Single_Delivery> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.shopping_cart),
+                leading: Image(image: AssetImage("assets/images/shoe.webp"),fit: BoxFit.cover,),
                 title: Text("Product Name",style: TextStyle(fontWeight: FontWeight.w600),),
                 subtitle: Text("10 X 19.98 \$"),
                 trailing: Text("50.52 \$"),
@@ -150,10 +151,15 @@ class _Single_DeliveryState extends State<Single_Delivery> {
               ],
             ),
             SizedBox(height: 20,),
-            Container(
-              height: 60,
-              color: AppColors.bgreen,
-              child: Center(child: Text("ver ubicación de entrega",style: TextStyle(color: Colors.white),)),
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Single_Restaurent()));
+              },
+              child: Container(
+                height: 60,
+                color: AppColors.bgreen,
+                child: Center(child: Text("ver ubicación de entrega",style: TextStyle(color: Colors.white),)),
+              ),
             )
         
           ],
