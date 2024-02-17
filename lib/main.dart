@@ -1,6 +1,9 @@
 import 'package:driver/view/flash/flash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+
+import 'view/home/screens/home.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
         fontFamily: "Poppins"
       ),
-      home: Flash(),
+      home: FirebaseAuth.instance!.currentUser != null ? Home() : Flash(),
     );
   }
 }
