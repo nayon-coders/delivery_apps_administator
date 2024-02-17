@@ -1,19 +1,16 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:driver/utilitys/colors.dart';
-import 'package:driver/view/payment_histori/widget/pay_button.dart';
-import 'package:driver/view/paymment_detials/widget/payment_detial_button.dart';
-import 'package:driver/view/user_list/User_List.dart';
 import 'package:driver/widgets/app_inputs.dart';
 import 'package:flutter/material.dart';
 
-class Add_Deliver extends StatefulWidget {
-  const Add_Deliver({super.key});
+class CreateNewDeliveryBoy extends StatefulWidget {
+  const CreateNewDeliveryBoy({super.key});
 
   @override
-  State<Add_Deliver> createState() => _Add_DeliverState();
+  State<CreateNewDeliveryBoy> createState() => _CreateNewDeliveryBoyState();
 }
 
-class _Add_DeliverState extends State<Add_Deliver> {
+class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
   final _name=TextEditingController();
   final _email=TextEditingController();
   final _number=TextEditingController();
@@ -24,11 +21,13 @@ class _Add_DeliverState extends State<Add_Deliver> {
       child: Scaffold(
         backgroundColor: AppColors.aapbg,
         appBar: AppBar(
-          elevation: 2.0,
+          leading: IconButton(
+            onPressed: ()=>Navigator.pop(context),
+            icon: Icon(Icons.arrow_back, color: Colors.black,),
+          ),
           title: Text(
             "Crear nuevo repartidor",
-            style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),
-          centerTitle: true,
+            style: TextStyle(fontWeight: FontWeight.w600,fontSize: 17, color: Colors.black),),
           backgroundColor: AppColors.aapbg,
         ),
         body: SingleChildScrollView(

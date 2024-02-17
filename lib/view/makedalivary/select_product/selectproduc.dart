@@ -1,6 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:driver/utilitys/colors.dart';
-import 'package:driver/view/all_delivery.dart';
+import 'package:driver/view/delivery_boy_management/all_delivery.dart';
 import 'package:driver/view/all_product/All_Product.dart';
 import 'package:driver/view/single_delivery/single_deliver.dart';
 import 'package:driver/widgets/app_inputs.dart';

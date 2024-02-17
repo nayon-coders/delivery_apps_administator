@@ -1,5 +1,5 @@
 import 'package:driver/utilitys/colors.dart';
-import 'package:driver/view/single_restaurent/Single_Restaurent.dart';
+import 'package:driver/view/restaurent_management/Single_Restaurent.dart';
 import 'package:flutter/material.dart';
 class Single_Delivery extends StatefulWidget {
   const Single_Delivery({super.key});
