@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205691086978",
+    "project_id": "delivery-app-d1fc7",
+    "storage_bucket": "delivery-app-d1fc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205691086978:android:874ae77f359b0aa1ecac9b",
+        "android_client_info": {
+          "package_name": "com.delieryadmin.app.nayon.coders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUkQhjBsUGbdmW5EJANeOMIVyBTmqIGR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
