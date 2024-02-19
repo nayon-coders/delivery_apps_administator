@@ -99,10 +99,24 @@ class _AllDeliveryBoyState extends State<AllDeliveryBoy> {
         ),
       ),
  
-      floatingActionButton: FloatingActionButton(
-        onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateNewDeliveryBoy())),
-        child: Icon(Icons.add),
-        backgroundColor: AppColors.black,
+      floatingActionButton: Container(
+        width: 200,
+        height: 50,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.black,
+        ),
+        child: FloatingActionButton(
+          onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateNewDeliveryBoy())),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.add,color: Colors.white,),
+              Text("Add new",style: TextStyle(color: Colors.white),)
+            ],
+          ),
+          backgroundColor: AppColors.black,
+        ),
       ),
 
 
