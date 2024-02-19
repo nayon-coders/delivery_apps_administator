@@ -104,7 +104,7 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
               SizedBox(height: 20,),
 
               InkWell(
-                onTap: ()=>_addDelivery(),
+
                 child: Container(
                   height: 60,
                   decoration: BoxDecoration(
@@ -112,8 +112,8 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: InkWell(
-                    onTap: (){},
-                    child: Center(child: Text("Crear nuevo repartidor",style: TextStyle(color: Colors.white),)),
+                    onTap: ()=>_addDelivery(),
+                    child: Center(child: _isLoading ? CircularProgressIndicator(color: Colors.white,) : Text("Crear nuevo repartidor",style: TextStyle(color: Colors.white),)),
                   ),
                 ),
               ),
@@ -198,6 +198,8 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
     setState(() => _isLoading = true);
     int id = Random().nextInt(1000);
 
+    print("id : $id");
+
     var imagePath, documentsPath;
 
     //convert image
@@ -221,7 +223,10 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
     //send data to server
     await FireabaseDeliveryBoyController.addDeliveryBoy(context: context, data: data);  //send data to server
     await AuthController.signInWithEmailAndPassword(context: context, email: _email.text, pass: _password.text);
+
+    //
     setState(() => _isLoading = false);
+
   }
 
   // _editRestaurent() async{

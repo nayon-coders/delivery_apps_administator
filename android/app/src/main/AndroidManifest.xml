@@ -9,7 +9,7 @@
 
 
     <application
-        android:label="driver"
+        android:label="Admin App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
