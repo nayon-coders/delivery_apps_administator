@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:driver/utilitys/colors.dart';
 import 'package:driver/view/home/screens/home.dart';
-import 'package:driver/view/single_delivery/single_deliver.dart';
 import 'package:driver/widgets/appButton.dart';
 import 'package:driver/widgets/app_inputs.dart';
 import 'package:driver/widgets/app_networkimages.dart';

@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:driver/firebase/controller/delivery_body_controller.dart';
 import 'package:driver/firebase/controller/restaturen_controller.dart';
 import 'package:driver/utilitys/colors.dart';
+import 'package:driver/view/delivery_boy_management/add_deliverboy.dart';
 import 'package:driver/view/payment_histori/Payment_Histori.dart';
 import 'package:driver/view/restaurent_management/create_restaturent.dart';
 import 'package:driver/view/restaurent_management/widget/button.dart';
@@ -77,7 +78,7 @@ class _SingleDeliveryBoyState extends State<SingleDeliveryBoy> {
               ),
               PaymentHistoryButton(text: "Call him",icon: Icons.call, bgcolor: AppColors.bgreen,onCleck: ()=>AppUrlLauncher.makePhoneCall(widget.singleDeliveryBoy!["phone"]!),),
               PaymentHistoryButton(text: "Edit Information",icon: Icons.edit, bgcolor: AppColors.oblue,onCleck: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateRestaurent(restaurent: widget.singleDeliveryBoy!)));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>CreateNewDeliveryBoy(data: widget.singleDeliveryBoy!)));
               },),
 
               SizedBox(height: 30,),

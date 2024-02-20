@@ -20,7 +20,12 @@ class _Payment_HistoriState extends State<Payment_Histori> {
     return Scaffold(
       backgroundColor: AppColors.babg,
       appBar: AppBar(
-        title: Text("Historial de pagos",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+        leading: IconButton(
+          onPressed: ()=>Navigator.pop(context),
+          icon: Icon(Icons.arrow_back, color: Colors.black,),
+
+        ),
+        title: Text("Historial de pagos",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500, color: Colors.black),),
         backgroundColor: AppColors.aapbg,
       ),
       body: Padding(
@@ -59,6 +64,7 @@ class _Payment_HistoriState extends State<Payment_Histori> {
                   },
                   child: Container(
                     height: 180,
+                    padding: EdgeInsets.all(5),
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.white,

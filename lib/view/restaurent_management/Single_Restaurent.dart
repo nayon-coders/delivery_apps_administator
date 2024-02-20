@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 import '../../generated/assets.dart';
 import 'Todo_Restaurante.dart';
 class Single_Restaurent extends StatefulWidget {
-  final QueryDocumentSnapshot<Map<String, dynamic>>? restaurent;
+  final dynamic restaurent;
   const Single_Restaurent({super.key, this.restaurent});
 
   @override
@@ -27,7 +27,6 @@ class _Single_RestaurentState extends State<Single_Restaurent> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    print("widget.restaurent!.data() ${widget.restaurent!.data()}");
   }
   @override
   Widget build(BuildContext context) {
@@ -41,7 +40,7 @@ class _Single_RestaurentState extends State<Single_Restaurent> {
         title: Text("Single Restaurent",style: TextStyle(fontWeight: FontWeight.w600, color: Colors.black),),
         backgroundColor: AppColors.aapbg,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(15.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
