@@ -41,11 +41,11 @@ class _OrderFromRestaurentListViewState extends State<OrderFromRestaurentListVie
           }else if(snapshot.hasData){
             dataList.clear();
             if(widget.status != null ){
-
-              for(var i in snapshot.data!.docs){
-                print("DFASDFDSA == ${i.data()["status"]}");
-                if(i.data()["status"] == widget.status){
-                  dataList.add(i.data());
+              if(snapshot.data!.docs.isNotEmpty){
+                for(var i in snapshot.data!.docs){
+                  if(i.data()["status"] == widget.status){
+                    dataList.add(i.data());
+                  }
                 }
               }
             }else{
@@ -57,7 +57,8 @@ class _OrderFromRestaurentListViewState extends State<OrderFromRestaurentListVie
             //print(dataList[0]);
 
 
-            return dataList.isNotEmpty ? ListView.builder(
+            return dataList.isNotEmpty
+                ? ListView.builder(
                 itemCount:  widget.itemCount == null ? dataList.length : dataList.length > widget.itemCount! ? widget.itemCount : dataList.length,
                 shrinkWrap: true,
                 // physics: NeverScrollableScrollPhysics(),
@@ -124,7 +125,8 @@ class _OrderFromRestaurentListViewState extends State<OrderFromRestaurentListVie
                       ),
                     ),
                   );
-                }) : Center(child: Text("No data found"),);
+                })
+                : Center(child: Text("No data found"),);
           }else{
             return Center(
               child: Text("No Data Found"),

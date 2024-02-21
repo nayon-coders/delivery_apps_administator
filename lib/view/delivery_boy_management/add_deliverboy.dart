@@ -268,7 +268,6 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
     };
     //send data to server
     await FireabaseDeliveryBoyController.addDeliveryBoy(context: context, data: data);  //send data to server
-    await AuthController.signInWithEmailAndPassword(context: context, email: _email.text, pass: _password.text);
 
     //
     setState(() => _isLoading = false);
