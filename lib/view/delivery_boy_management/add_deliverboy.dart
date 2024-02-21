@@ -265,6 +265,7 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
       "documents" : documentsPath,
       "status": "Active",
       "created_at": DateTime.now().toString(),
+      "token" : ""
     };
     //send data to server
     await FireabaseDeliveryBoyController.addDeliveryBoy(context: context, data: data);  //send data to server
@@ -306,6 +307,7 @@ class _CreateNewDeliveryBoyState extends State<CreateNewDeliveryBoy> {
       "documents" : documentsPath,
       "status": "Active",
       "created_at": DateTime.now().toString(),
+
     };
     //send data to server
     await FireabaseDeliveryBoyController.editDeliveryBoy(context: context, data: data, docId: widget.data!.id);  //send data to server
