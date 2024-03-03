@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:driver/notification/local_notification.dart';
 import 'package:driver/view/flash/flash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'view/home/screens/home.dart';
@@ -16,6 +19,7 @@ void main() async{
 
   requestNotificationPermissions();
   LocalNotificationService.initialize();
+
 
 
   runApp(const MyApp());

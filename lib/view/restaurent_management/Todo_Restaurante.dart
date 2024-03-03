@@ -60,7 +60,7 @@ class _RestaturentmanagementState extends State<Restaturentmanagement> {
                               onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => Single_Restaurent(restaurent: data,))),
                                 leading: AppNetworkImage(imageUrl: data["image"], height: 50, width: 50,),
                                 title: Text("${data["name"]}",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 16),),
-                                subtitle: Text("Location: ${data["location"]}"),
+                                subtitle: Text("Location: ${data["location"]["address"]}"),
                                 tileColor: Colors.white,
                                 trailing:InkWell(
 

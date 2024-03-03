@@ -53,7 +53,7 @@ class _Single_RestaurentState extends State<Single_Restaurent> {
             AppRichText(text: "Name:", text2: "${widget.restaurent!["name"]}", ),
             AppRichText(text: "Email:", text2: "${widget.restaurent!["email"]}", ),
             AppRichText(text: "Phone:", text2: "${widget.restaurent!["phone"]}", ),
-            AppRichText(text: "Location:", text2: "${widget.restaurent!["location"]}", ),
+            AppRichText(text: "Location:", text2: "${widget.restaurent!["location"]["address"]}", ),
             AppRichText(
                 text: "Status:",
                 color: Colors.black,

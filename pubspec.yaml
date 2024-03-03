@@ -51,6 +51,13 @@ dependencies:
   firebase_messaging: ^14.7.10
   flutter_local_notifications: ^9.2.0
   permission_handler: ^11.0.1
+  google_maps_flutter: ^2.3.0
+  google_maps_widget: ^1.0.5+1
+  google_maps_place_picker_mb: ^3.0.2
+
+  flutter_google_places: ^0.3.0
+  map_location_picker: ^0.0.1
+  open_street_map_search_and_pick: ^0.1.0
 
 dev_dependencies:
   flutter_test:
