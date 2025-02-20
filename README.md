@@ -8,7 +8,7 @@ I’m the founder of BrightFuture IT, where we specialize in Flutter development
 ## 🖼️ Screenshots  
 
 <p align ="center">
-<a href="https://nayon-coders.brghtfuture-it.com"><img src="screenshot/nayon-coders.png" alt="Nayon Coders" width="30%"/></a>
+<a href="https://nayon-coders.bright-futureit.com/"><img src="screenshot/nayon-coders.png" alt="Nayon Coders" width="30%"/></a>
 </p>
 <p align="center">
   <img src="screenshot/login.png" alt="Dashboard" width="30%"/>
@@ -22,11 +22,6 @@ I’m the founder of BrightFuture IT, where we specialize in Flutter development
   <img src="screenshot/create_restaurant.png" alt="Car Details" width="30%"/>
 </p>
 
-
-<p align="center">
-  <img src="screenshot/filter.png" alt="Dashboard" width="30%"/>
-    
-</p>
 
 
 
